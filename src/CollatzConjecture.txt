@@ -1,0 +1,31 @@
+INPUT "Provide a number greater than 1", num
+count = 0
+
+WHILE num > 1 endWhileLabel
+    GOSUB checkEven
+    IF x > 0 THEN isEven
+        num = num * 3
+        num = num + 1
+        count = count + 1
+        GOTO continue
+
+isEven:
+    num = num / 2
+    count = count + 1
+continue:
+endWhileLabel:
+
+PRINT "It took ", count, " steps"
+END
+
+
+checkEven:
+    x = num
+    x = x/2
+    x = x*2
+    IF x < num THEN odd
+        x = 1
+        RETURN
+odd:
+    x = 0
+    RETURN

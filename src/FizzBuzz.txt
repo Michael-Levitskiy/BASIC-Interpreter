@@ -1,0 +1,50 @@
+FOR i = 1 TO 100
+    GOSUB three
+    IF x > 0 THEN isThree
+        GOSUB five
+        IF x > 0 THEN isFive
+            PRINT i
+            GOTO loopEnd
+
+isThree:
+    GOSUB five
+    IF x > 0 THEN isBoth
+        PRINT "Fizz"
+        GOTO loopEnd
+
+isBoth:
+    PRINT "FizzBuzz"
+    GOTO loopEnd
+
+isFive:
+    PRINT "Buzz"
+    GOTO loopEnd
+
+loopEnd:
+    NEXT i
+
+END
+
+
+three:
+    x = i
+    x = x/3
+    x = x*3
+    IF x < i THEN notThree
+        x = 1
+        RETURN
+notThree:
+    x = 0
+    RETURN
+
+
+five:
+    x = i
+    x = x/5
+    x = x*5
+    IF x < i THEN notFive
+        x = 1
+        RETURN
+notFive:
+    x = 0
+    RETURN

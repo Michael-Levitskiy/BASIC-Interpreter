@@ -1,0 +1,39 @@
+x = 5 + 5 + 9 * 0 - 2
+y = 10 / 5 + x * -80 - (100.5 + -0.5)
+word = 120
+
+PRINT x
+PRINT word, y, 5+4
+
+DATA "hello", 12, -3.5, "World"
+READ stringVar$, num, float%, string$
+INPUT "Input numbers:", num1, num2, num3
+
+label:
+m = 5 + 2
+
+RANDOM()
+
+FOR A = 0 TO 10 STEP 2
+NEXT A
+
+GOSUB label
+
+IF x<5 THEN xIsSmall
+
+WHILE y > 8-3 endWhileLabel
+y = y + 1
+endWhileLabel:
+
+LEFT$("HELLO", 6-1)
+RIGHT$("WORLD", y)
+MID$("Your Name", 8*7, x)
+
+NUM$(5.502)
+VAL("abc")
+VAL%("efg")
+
+
+xIsSmall:
+
+END

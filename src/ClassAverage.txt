@@ -1,0 +1,14 @@
+DATA "Dan",100,95,91,87,93
+DATA "Ben",98,85,89,72,96
+DATA "Eli",99,97,95,100,94
+DATA "Joe",87,79,82,94,88
+DATA "Nick",65,91,78,88,100
+
+FOR i = 0 TO 5
+    READ s$,a,b,c,d,e
+    x = a+b+c+d+e
+    x = x / 5
+    PRINT "Student: ", s$, " Average: ", x
+    NEXT i
+
+END
